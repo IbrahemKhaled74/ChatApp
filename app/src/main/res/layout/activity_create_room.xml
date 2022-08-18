@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vmm"
+            type="com.example.chat_app.createRoom.CreatRoomViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".createRoom.CreateRoom">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_background"
+            tools:context=".login.Login">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transperant"
+                android:theme="@style/Theme.ChatApp.AppBarOverlay"
+                app:elevation="0dp">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/transperant"
+
+                    app:popupTheme="@style/Theme.ChatApp.PopupOverlay">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Create New Room"
+                            android:textSize="25sp"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".80"
+                    app:cardElevation="10dp"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/creat_group"
+
+                            />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/room_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            app:boxBackgroundColor="@color/transperant"
+                            app:endIconMode="clear_text"
+                            app:error="@{vmm.roomNameError}"
+                            app:startIconDrawable="@drawable/ic_baseline_home_24">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Enter Room Name"
+
+                                android:text="@={vmm.roomName}" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+
+                            />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/room_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            app:boxBackgroundColor="@color/transperant"
+                            app:endIconMode="clear_text"
+                            app:error="@{vmm.roomDescError}"
+                            app:startIconDrawable="@drawable/ic_baseline_home_24">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Enter Room Description"
+                                android:lines="4"
+                                android:maxLines="4"
+                                android:text="@={vmm.roomDesc}" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Create"
+    android:onClick="@{()->vmm.createRoom()}"
+    android:layout_margin="10dp"
+    />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

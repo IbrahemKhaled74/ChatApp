@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.example.chat_app.home.HomeViewModel" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_200"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/chat_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:adjustViewBounds="true"
+            android:padding="8dp"
+            android:src="@drawable/coding" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@{item.user.userName}"
+
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:text="hema" />
+
+        <TextView
+            android:id="@+id/gmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@{item.user.email}"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="hema@gmail.com" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.chat_app.join_room.JoinRoomUserViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_background"
+        tools:context=".chat.ChatScreen">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transperant"
+            android:theme="@style/Theme.ChatApp.AppBarOverlay"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/transperant"
+
+                app:popupTheme="@style/Theme.ChatApp.PopupOverlay">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textSize="25sp"
+                        android:text="@{vm.room.name}"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_back"
+                        android:onClick="@{()->vm.goToHome()}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/white"
+                android:foregroundGravity="center"
+                app:cardCornerRadius="10dp"
+                app:elevation="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent=".93"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".93"
+
+                >
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="Hello , Welcome To Our Chat Room" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:text="@{vm.room.name}"
+                        tools:text="@string/app_name" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="8dp"
+                        app:add_image="@{vm.room.image}"
+                        android:adjustViewBounds="true"
+                        tools:src="@drawable/coding" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@{vm.room.desc}"
+                        tools:text="hgfffffffffhgfhgfhg" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/custome_send_bc"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Join"
+                        android:onClick="@{()->vm.GoToChatRoom()}"
+                        android:textColor="@color/white"
+
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

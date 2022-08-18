@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chat_app">
+
+    <application
+        android:name=".myApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChatApp">
+        <activity
+            android:name=".join_room.JoinRoomUser"
+            android:exported="false" />
+        <activity
+            android:name=".test"
+            android:exported="false"
+            android:label="@string/title_activity_test"
+            android:theme="@style/Theme.ChatApp.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.ChatApp.NoActionBar" />
+        <activity
+            android:name=".splash.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chat.ChatScreen"
+            android:exported="false" />
+        <activity
+            android:name=".createRoom.CreateRoom"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeScreen"
+            android:exported="false" />
+        <activity
+            android:name=".login.Login"
+            android:exported="true" />
+        <activity
+            android:name=".register.Regestier"
+            android:exported="true" />
+    </application>
+
+</manifest>
