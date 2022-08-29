@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="item"
             type="com.example.chat_app.chat.ChatViewModel" />
@@ -50,10 +51,10 @@
                         />
 
                     <ImageView
-                        android:onClick="@{()->item.endActivity()}"
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:onClick="@{()->item.endActivity()}"
                         android:padding="10dp"
                         android:src="@drawable/ic_back"
                         app:layout_constraintStart_toStartOf="parent"
@@ -74,16 +75,15 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="30dp"
-                app:cardCornerRadius="10dp"
                 android:backgroundTint="@color/white"
                 android:foregroundGravity="center"
+                app:cardCornerRadius="10dp"
+                app:elevation="18dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent=".93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent=".90"
-                app:elevation="18dp"
-                >
+                app:layout_constraintWidth_percent=".90">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/continer"
@@ -93,13 +93,13 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycle_view"
-                        tools:listitem="@layout/sent_message_item"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        app:layout_constraintTop_toTopOf="@id/continer"
+                        android:layout_marginBottom="8dp"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toTopOf="@id/message"
-                        android:layout_marginBottom="8dp"
+                        app:layout_constraintTop_toTopOf="@id/continer"
+                        tools:listitem="@layout/sent_message_item"
 
                         />
 
@@ -110,40 +110,40 @@
                         android:layout_marginEnd="10dp"
                         android:background="@drawable/custome_edit_text_bc"
                         android:hint="Type A Message"
+                        android:padding="13dp"
                         android:text="@={item.message}"
-                        android:padding="11dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/send"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/recycle_view"
+                        app:layout_goneMarginEnd="10dp" />
 
                     <LinearLayout
-                        android:onClick="@{()->item.sendMessage()}"
                         android:id="@+id/send"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/custome_send_bc"
                         android:gravity="center"
-                        android:layout_marginStart="5dp"
+                        android:onClick="@{()->item.sendMessage()}"
                         android:orientation="horizontal"
-                        android:padding="10dp"
+                        android:padding="5dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent">
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/message">
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_margin="5dp"
+                            android:layout_margin="8dp"
                             android:text="Send"
                             android:textColor="@color/white"
-                            android:textSize="20sp"
-
-                            />
+                            android:textSize="18sp" />
 
                         <ImageView
                             android:layout_width="20dp"
-                            android:layout_height="30dp"
-                            android:layout_marginStart="5dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="3dp"
                             android:layout_marginEnd="5dp"
                             android:src="@drawable/send"
 
