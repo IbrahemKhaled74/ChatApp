@@ -26,7 +26,10 @@ class SplashScreen : AppCompatActivity() {
             signInFireStore(userid = current.uid, onSuccessListener = {
                 val user = it.toObject(AppUser::class.java)
                 DataBaseUtils.user = user
+                if(user!=null)
                 goToHomeActivity()
+                else
+                    startLoginActivity()
             }, onFailureListener = {
                 Toast.makeText(this, "Error", Toast.LENGTH_LONG).show()
             })
