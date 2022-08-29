@@ -7,6 +7,8 @@ import com.example.chat_app.dataBase.DataBaseUtils
 import com.example.chat_app.dataBase.getRoomFromFireStore
 import com.example.chat_app.dataBase.getUserRoomRef
 import com.example.chat_app.join_room.JoinRoom
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class HomeViewModel : baseViewModel<Navigator>() {
 
@@ -53,6 +55,7 @@ class HomeViewModel : baseViewModel<Navigator>() {
     }
 
     fun logOut() {
+        Firebase.auth.signOut()
         navigator?.goToLogin()
         DataBaseUtils.user = null
 

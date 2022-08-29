@@ -53,11 +53,11 @@ class LoginViewModel: baseViewModel<Navigator>() {
         signInFireStore(uid, onSuccessListener = {
          loading.value=false
          val user:AppUser?=it.toObject(AppUser::class.java)
-            DataBaseUtils.user=user
             if (user==null){
                 messageLiveData.value="Invalid Email Or Password"
                 return@signInFireStore
             }
+            DataBaseUtils.user=user
             navigator?.openHomeScreen()
         }, onFailureListener = {
            loading.value=false

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.chat_app.R
 import com.example.chat_app.dataBase.AppUser
 import com.example.chat_app.dataBase.DataBaseUtils
 import com.example.chat_app.dataBase.signInFireStore
@@ -16,7 +15,6 @@ import com.google.firebase.ktx.Firebase
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
         checkUser()
     }
 

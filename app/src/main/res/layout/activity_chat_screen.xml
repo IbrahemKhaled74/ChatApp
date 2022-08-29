@@ -123,8 +123,9 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/custome_send_bc"
                         android:gravity="center"
+                        android:layout_marginStart="5dp"
                         android:orientation="horizontal"
-                        android:padding="7dp"
+                        android:padding="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent">
 

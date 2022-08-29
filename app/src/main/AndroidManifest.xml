@@ -14,17 +14,13 @@
             android:name=".join_room.JoinRoomUser"
             android:exported="false" />
         <activity
-            android:name=".test"
-            android:exported="false"
-            android:label="@string/title_activity_test"
-            android:theme="@style/Theme.ChatApp.NoActionBar" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".home.HomeScreen"
             android:exported="false"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.ChatApp.NoActionBar" />
         <activity
             android:name=".splash.SplashScreen"
+            android:theme="@style/splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,9 +33,6 @@
             android:exported="false" />
         <activity
             android:name=".createRoom.CreateRoom"
-            android:exported="false" />
-        <activity
-            android:name=".home.HomeScreen"
             android:exported="false" />
         <activity
             android:name=".login.Login"

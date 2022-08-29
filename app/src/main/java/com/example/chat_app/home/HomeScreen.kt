@@ -65,12 +65,7 @@ class HomeScreen : baseActivity<ActivityHomeScreenBinding, HomeViewModel>(), Nav
     }
 
 
-    private fun openLogIn() {
-        val intent = Intent(this, Login::class.java)
-        startActivity(intent)
-        finish()
 
-    }
 
     override fun goToChat(room: Room) {
         val intent = Intent(this, ChatScreen::class.java)
