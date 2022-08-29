@@ -1,6 +1,6 @@
 # ChatApp
 
-Please ⭐️ this repo and share it with others
+Please ⭐️ this repo and share it with others.
 
 # Description
 Chat app with kotlin With Registration and login page Once u Login In you don’t need to login again,
