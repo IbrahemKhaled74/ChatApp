@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="com.example.chat_app.join_room.JoinRoomUserViewModel" />
+            type="com.example.chat_app.ui.join_room.JoinRoomUserViewModel" />
 
     </data>
 
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/main_background"
-        tools:context=".chat.ChatScreen">
+        tools:context=".ui.chat.ChatScreen">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                         android:layout_height="200dp"
                         android:layout_gravity="center_vertical"
                         android:layout_margin="8dp"
-                        app:add_image="@{vm.room.image}"
+                        app:add_image="@{vm.room.getImage}"
                         android:adjustViewBounds="true"
                         tools:src="@drawable/coding" />
 
@@ -136,7 +136,7 @@
                         android:gravity="center"
                         android:padding="10dp"
                         android:text="Join"
-                        android:onClick="@{()->vm.GoToChatRoom()}"
+                        android:onClick="@{()->vm.goToChatRoom()}"
                         android:textColor="@color/white"
 
                         />

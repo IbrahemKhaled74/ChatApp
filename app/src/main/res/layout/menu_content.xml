@@ -6,7 +6,7 @@
 
         <variable
             name="item"
-            type="com.example.chat_app.home.HomeViewModel" />
+            type="com.example.chat_app.ui.home.HomeViewModel" />
 
     </data>
 

@@ -7,7 +7,7 @@
 
         <variable
             name="vmm"
-            type="com.example.chat_app.register.RegisterViewModel" />
+            type="com.example.chat_app.ui.register.RegisterViewModel" />
 
     </data>
 
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/main_background"
-        tools:context=".register.Regestier">
+        tools:context=".ui.register.Regestier">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -172,7 +172,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:drawableEnd="@drawable/ic_arrow"
-                    android:onClick="@{()->vmm.creatAccount()}"
+                    android:onClick="@{()->vmm.createAccount()}"
                     android:padding="15dp"
                     android:text="@string/create_account" />
             </LinearLayout>

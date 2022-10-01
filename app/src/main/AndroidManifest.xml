@@ -3,7 +3,7 @@
     package="com.example.chat_app">
 
     <application
-        android:name=".myApplication"
+        android:name=".my_app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,15 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatApp">
         <activity
-            android:name=".join_room.JoinRoomUser"
+            android:name=".ui.join_room.JoinRoomUser"
             android:exported="false" />
         <activity
-            android:name=".home.HomeScreen"
+            android:name=".ui.home.HomeScreen"
             android:exported="false"
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.ChatApp.NoActionBar" />
         <activity
-            android:name=".splash.SplashScreen"
+            android:name=".ui.splash.SplashScreen"
             android:theme="@style/splash"
             android:exported="true">
             <intent-filter>
@@ -29,16 +29,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".chat.ChatScreen"
+            android:name=".ui.chat.ChatScreen"
             android:exported="false" />
         <activity
-            android:name=".createRoom.CreateRoom"
+            android:name=".ui.createRoom.CreateRoom"
             android:exported="false" />
         <activity
-            android:name=".login.Login"
+            android:name=".ui.login.Login"
             android:exported="true" />
         <activity
-            android:name=".register.Regestier"
+            android:name=".ui.register.Regestier"
             android:exported="true" />
     </application>
 

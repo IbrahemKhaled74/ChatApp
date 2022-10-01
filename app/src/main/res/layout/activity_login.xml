@@ -7,7 +7,7 @@
 
         <variable
             name="vmm"
-            type="com.example.chat_app.login.LoginViewModel" />
+            type="com.example.chat_app.ui.login.LoginViewModel" />
 
     </data>
 
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/main_background"
-        tools:context=".login.Login">
+        tools:context=".ui.login.Login">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"

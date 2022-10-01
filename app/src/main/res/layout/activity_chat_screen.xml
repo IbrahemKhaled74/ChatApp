@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="com.example.chat_app.chat.ChatViewModel" />
+            type="com.example.chat_app.ui.chat.ChatViewModel" />
 
     </data>
 
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/main_background"
-        tools:context=".chat.ChatScreen">
+        tools:context=".ui.chat.ChatScreen">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"

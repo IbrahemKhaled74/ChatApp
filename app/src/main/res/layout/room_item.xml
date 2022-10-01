@@ -6,7 +6,7 @@
     <data>
         <variable
             name="item"
-            type="com.example.chat_app.home.Room" />
+            type="com.example.domain.models.Room" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -27,7 +27,7 @@
                 android:layout_height="130dp"
                 tools:src="@drawable/coding"
                 android:padding="8dp"
-                app:add_image="@{item.image}"
+                app:add_image="@{item.getImage}"
                 android:layout_margin="8dp" />
 
             <TextView

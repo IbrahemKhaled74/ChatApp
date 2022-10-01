@@ -6,7 +6,7 @@
     <data>
 <variable
     name="item"
-    type="com.example.chat_app.createRoom.Category" />
+    type="com.example.domain.models.Category" />
     </data>
 
     <LinearLayout

@@ -7,19 +7,19 @@
 
         <variable
             name="vmm"
-            type="com.example.chat_app.createRoom.CreatRoomViewModel" />
+            type="com.example.chat_app.ui.createRoom.CreateRoomViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".createRoom.CreateRoom">
+        tools:context=".ui.createRoom.CreateRoom">
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/main_background"
-            tools:context=".login.Login">
+            tools:context=".ui.login.Login">
 
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
